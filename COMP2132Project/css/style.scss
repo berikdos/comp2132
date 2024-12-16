@@ -1,0 +1,98 @@
+// Author: @Berik Dossayev
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #2c3e50;
+$font-path: '../fonts/';
+
+// Custom Font Imports
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$font-path}OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$font-path}OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$font-path}OpenSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+// Global styles
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #ecf0f1;
+  text-align: center;
+  color: $text-color;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+#word-container {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#hint {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#message {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #e74c3c;
+}
+
+#hangman-image img {
+  width: 150px;
+  height: auto;
+}
+
+#letter-buttons {
+  margin: 20px 0;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+// Responsive styles
+@media (max-width: 600px) {
+  .game-container {
+    padding: 15px;
+  }
+
+  #word-container {
+    font-size: 28px;
+  }
+}
